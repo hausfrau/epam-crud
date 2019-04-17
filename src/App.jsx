@@ -4,7 +4,7 @@ import Form from './components/Form';
 import List from './components/List';
 import withCrud from './hoc/withCrud';
 
-function App() {
+function App({ data, create, update, remove }) {
     return (
         <div className="container">
             <Form onSubmit={create} />

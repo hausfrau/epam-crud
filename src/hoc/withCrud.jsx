@@ -28,7 +28,7 @@ function withCrud(Component, apiUrl) {
         update = id =>
             axios.patch(`${apiUrl}/${id}`)
                 .then(response => response.data)
-                .then(updateItem => {
+                .then(updatedItem => {
                     const data = this.state.data.map(item => {
                         if (item.id !== updatedItem.id) return item;
 
